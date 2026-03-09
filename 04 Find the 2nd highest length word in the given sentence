@@ -22,8 +22,8 @@ class Main {
 import java.util.*;
 import java.util.stream.Collectors;
 import java.util.function.Function;
-class Main {
-    public static void main(String[] args) {
+class Main {                                             //map(x -> x.length())
+    public static void main(String[] args) {             //[1,8,7,3,2,4]
         
         String s= "I learning streams API in Java";
         
