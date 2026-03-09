@@ -12,3 +12,9 @@ class reverse {
 }                                                                   //s.chars()
                                                                     //.mapToObj(c -> (char) c)
                                                                     // .forEach(System.out::println);
+
+//Arrays.stream(s.split("\\s+"))
+  //    .sorted(Comparator.comparing(String::length))
+    //  .forEach(System.out::println);
+
+//print in asscending order based on words length
