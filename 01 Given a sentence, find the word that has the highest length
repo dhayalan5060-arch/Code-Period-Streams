@@ -1,13 +1,14 @@
 import java.util.*;
 class reverse {
-    public static void main(String[] args) {
-        String s = " I am learning Stream Api in Java";
-        
-        String ans = Arrays.stream(s.split("\\s+"))
-                            .max(Comparator.comparing(String::length))
-                            .get();
-        System.out.println(ans);
+    public static void main(String[] args) {                          //String does not support stream method, we need to convert it to an array and use stream
+        String s = " I am learning Stream Api in Java";               // 1)Using split() + Arrays.stream()                    
+        String ans = Arrays.stream(s.split("\\s+"))                    //2) Use pattern.SplitStream 
+                            .max(Comparator.comparing(String::length)) //   Pattern.compile("\\s+")
+                            .get();                                    //.splitAsStream(s)
+        System.out.println(ans);                                       //.forEach(System.out::println)
         
     
-    }
-}
+    }                                                               //3) Convert String to Character Stream
+}                                                                   //s.chars()
+                                                                    //.mapToObj(c -> (char) c)
+                                                                    // .forEach(System.out::println);
