@@ -17,4 +17,10 @@ class reverse {
   //    .sorted(Comparator.comparing(String::length))
     //  .forEach(System.out::println);
 
-//print in asscending order based on words length
+//print in ascending order based on word length
+
+//List<String> words = Arrays.stream(s.split("\\s+"))
+ //                          .sorted(Comparator.comparing(String::length))         // we can use list, it stores string [I, am, in, Api, Java, Stream, learning]
+ //                          .toList();
+
+//System.out.println(words);
