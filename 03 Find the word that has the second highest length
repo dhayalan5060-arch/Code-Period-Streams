@@ -1,0 +1,18 @@
+import java.util.*;
+import java.util.stream.Collectors;
+import java.util.function.Function;
+class Main {
+    public static void main(String[] args) {
+        
+        String s= "I am learning stream API in Java";
+        String hig = Arrays.stream(s.split("\\s+"))
+                            .sorted(Comparator.comparing(String::length).reversed())
+                    
+                            .skip(1)
+                            .findFirst().get();
+                            
+      System.out.println(hig);                      
+                            
+    
+    }
+}
