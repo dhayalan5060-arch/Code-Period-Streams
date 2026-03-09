@@ -6,9 +6,9 @@ class Main {
         
         String s= "I am learning stream API in Java";
         String hig = Arrays.stream(s.split("\\s+"))
-                            .sorted(Comparator.comparing(String::length).reversed())
+                            .sorted(Comparator.comparing(String::length).reversed())    //reversed belong to comparator method
                     
-                            .skip(1)
+                            .skip(1)                           //skip(2) means skips two elements
                             .findFirst().get();
                             
       System.out.println(hig);                      
