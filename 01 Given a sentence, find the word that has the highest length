@@ -1,0 +1,13 @@
+import java.util.*;
+class reverse {
+    public static void main(String[] args) {
+        String s = " I am learning Stream Api in Java";
+        
+        String ans = Arrays.stream(s.split("\\s+"))
+                            .max(Comparator.comparing(String::length))
+                            .get();
+        System.out.println(ans);
+        
+    
+    }
+}
