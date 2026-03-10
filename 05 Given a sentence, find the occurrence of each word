@@ -7,8 +7,8 @@ class Main {
 
         String s = "I am learning Streams API in Java Java";
 
-        Map<String, Long> ans = Arrays.stream(s.split("\\s+"))
-                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+        Map<String, Long> ans = Arrays.stream(s.split("\\s+"))                                  //Arrays.stream(s.toLowerCase().split("\\s+"))
+                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));    //Function.identity() returns its input unchanged.
 
         System.out.println(ans);
     }
