@@ -1,0 +1,17 @@
+import java.util.*;
+import java.util.stream.Collectors;
+ 
+class Main {
+    public static void main(String[] args) {
+ 
+        int[] arr = {1,2,3,4,5,6,7};
+ 
+        Map<String, List<Integer>> ans =
+                Arrays.stream(arr)
+                        .boxed()
+                        .collect(Collectors.groupingBy(
+                                x -> x % 2 == 0 ? "Even" : "Odd"
+                        ));
+ 
+        System.out.println(ans);
+    }
