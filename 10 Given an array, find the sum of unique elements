@@ -1,0 +1,16 @@
+import java.util.*;
+import java.util.stream.Collectors;
+import java.util.function.Function;
+
+class main {
+    public static void main(String[] args) {  
+        int [] arr={1,2,3,4,5,5,5,5,7,7,8};
+        
+        Optional<Integer> s = Arrays.stream(arr)
+                                    .boxed()
+                                    .distinct()
+                                    .reduce((x,y) -> x+y);       //sum();
+                      
+    System.out.println(s);
+    }                                                       
+} 
