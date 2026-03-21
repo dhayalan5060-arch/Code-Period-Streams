@@ -1,0 +1,13 @@
+import java.util.*;
+import java.util.stream.Collectors;
+import java.util.function.Function;
+class Main {
+    public static void main(String[] args) {
+        
+        List<Integer> num = Arrays.asList(1,20,30,55,88,99,74,58,36);
+        
+        Map<Integer,List<Integer>> num1 = num.stream()
+                                              .collect(Collectors.groupingBy(x -> (x/10)*10,LinkedHashMap::new, Collectors.toList()));
+        System.out.println(num1);
+    }
+}
