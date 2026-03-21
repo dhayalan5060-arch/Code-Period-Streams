@@ -1,0 +1,17 @@
+import java.util.*;
+import java.util.stream.Collectors;
+import java.util.function.Function;
+class Main {
+    public static void main(String[] args) {
+        
+        String[]  s = {"abc", "123", "xyz" };
+        
+        List<Integer> str = Arrays.stream(s)
+                                 .filter(x -> x.matches("\\d+"))
+                                 .map(Integer::parseInt)
+                                 .collect(Collectors.toList());
+        
+       
+        System.out.println(str);
+    }
+}
