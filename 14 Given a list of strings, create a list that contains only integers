@@ -7,7 +7,7 @@ class Main {
         String[]  s = {"abc", "123", "xyz" };
         
         List<Integer> str = Arrays.stream(s)
-                                 .filter(x -> x.matches("\\d+"))
+                                 .filter(x -> x.matches("\\d+"))    \\ ("\\d+") It matches one or more digits.
                                  .map(Integer::parseInt)
                                  .collect(Collectors.toList());
         
