@@ -8,10 +8,16 @@ class Main {
         
         List<Integer> str = Arrays.stream(s)
                                  .filter(x -> x.matches("\\d+"))    \\ ("\\d+") It matches one or more digits.
-                                 .map(Integer::parseInt)
+                                 .map(Integer::parseInt)           \\ converting string into integer
                                  .collect(Collectors.toList());
         
        
         System.out.println(str);
     }
 }
+
+//Without Using .map(Integer :: parseInt)
+List<String> num = Arrays.stream(s)
+                       .filter(x ->x.matches("\\d+"))
+                       .collect(Collectors.toList());
+
