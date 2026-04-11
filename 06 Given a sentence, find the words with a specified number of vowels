@@ -13,3 +13,22 @@ class Main {
       
     }
 }
+
+import java.util.*;
+import java.util.stream.Collectors;
+import java.util.function.Function;
+class Main {
+    public static void main(String[] args) {
+    
+  String s = "Dheena is a backend developer at Robert Bosch Bosch";
+    
+List<String> vowels = Arrays.stream(s.split("\\s+"))
+                            .map(x -> x.replaceAll("[^aeiouAEIOU]",""))
+                             .filter(x ->!x.isEmpty())                          // remove spaces from list
+                            .collect(Collectors.toList());
+                        
+   
+               
+        System.out.println(vowels);
+    }
+}
